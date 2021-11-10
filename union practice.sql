@@ -1,0 +1,5 @@
+SELECT SKU, SKU_Description, Department
+FROM CATALOG_SKU_2017
+UNION ALL
+SELECT SKU, SKU_Description, Department
+FROM CATALOG_SKU_2018;

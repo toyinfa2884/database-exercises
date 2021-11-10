@@ -1,0 +1,31 @@
+/*SELECT SUM(ExtendedPrice) AS WaterSportsRevenue
+FROM ORDER_ITEM
+WHERE SKU IN (SELECT SKU FROM SKU_DATA WHERE Department = 'Water Sports');*/
+
+/*SELECT SUM(ExtendedPrice) AS WaterSportsRevenue
+FROM ORDER_ITEM
+WHERE SKU IN (SELECT SKU FROM SKU_DATA WHERE Department = 'CAMPING');*/
+
+/*SELECT DISTINCT Buyer, Department
+FROM SKU_DATA
+WHERE SKU IN 
+(SELECT SKU 
+FROM ORDER_ITEM 
+WHERE OrderNumber IN  
+(SELECT OrderNumber 
+FROM RETAIL_ORDER 
+WHERE OrderMonth = 'January' 
+AND OrderYear = 2017));*/
+
+SELECT DISTINCT Buyer
+FROM SKU_DATA
+WHERE SKU IN 
+(SELECT SKU 
+FROM ORDER_ITEM 
+WHERE OrderNumber IN 
+(SELECT OrderNumber 
+FROM RETAIL_ORDER 
+WHERE OrderMonth = ''
+ AND OrderYear = 2018));
+
+

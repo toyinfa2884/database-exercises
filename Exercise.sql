@@ -1,0 +1,4 @@
+SELECT *
+FROM INVENTORY
+WHERE QuantityOnHand = 100
+AND WarehouseID = 300;

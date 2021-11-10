@@ -1,0 +1,3 @@
+SELECT *
+FROM ORDER_ITEM
+ORDER BY Price DESC, OrderNumber ASC;
